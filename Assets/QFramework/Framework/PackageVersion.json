@@ -1,0 +1,20 @@
+{
+    "Id": "",
+    "Version": "v1.0.95",
+    "Type": 0,
+    "AccessRight": 0,
+    "DownloadUrl": "",
+    "InstallPath": "Assets/QFramework/Framework/",
+    "IncludeFileOrFolders": [
+        "Assets/QFramework/Framework",
+        "Assets/QFramework/Toolkits"
+    ],
+    "DocUrl": "https://liangxiegame.com",
+    "Readme": {
+        "version": "v1.0.95",
+        "content": "SingletonKit：增加 PrefabSingleton 和 ScriptableSingleton",
+        "author": "liangxie",
+        "date": "2023 年 09 月 30 日 17:59",
+        "PackageId": ""
+    }
+}
