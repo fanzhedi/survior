@@ -507,6 +507,57 @@ Transform:
   - {fileID: 624403723}
   m_Father: {fileID: 1988678303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &718088805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 718088806}
+  - component: {fileID: 718088807}
+  m_Layer: 0
+  m_Name: EnemyGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &718088806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718088805}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.035374742, y: -0.026074747, z: -0.03751036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 861567845}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &718088807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718088805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8e4afbfcf124198a7df9b5af2d7418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Namespace: Survivor
+  ScriptName: EnemyGenerator
+  ScriptsFolder: Assets/Scripts/Game
+  GeneratePrefab: 0
+  PrefabFolder: Assets/Art/Prefab
+  Enemy: {fileID: 861567846}
 --- !u!1 &750386641
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,13 +652,14 @@ GameObject:
   m_Component:
   - component: {fileID: 861567845}
   - component: {fileID: 861567846}
+  - component: {fileID: 861567847}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &861567845
 Transform:
   m_ObjectHideFlags: 0
@@ -617,13 +669,13 @@ Transform:
   m_GameObject: {fileID: 861567843}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1746279132}
   - {fileID: 750386642}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 718088806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &861567846
 MonoBehaviour:
@@ -642,8 +694,26 @@ MonoBehaviour:
   ScriptsFolder: Assets/Scripts/Game
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
+  HP: 3
+  MoveSpeed: 2
   Sprite: {fileID: 1746279133}
   HurtBox: {fileID: 750386644}
+--- !u!114 &861567847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861567843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d51f3a7c41ab0346b49ae50d456bece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkType: 0
+  CustomComponentName: Enemy
+  CustomComment: 
+  mComponentName: Survivor.Enemy
 --- !u!1 &1746279131
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,6 +916,55 @@ MonoBehaviour:
   CustomComponentName: Sprite
   CustomComment: 
   mComponentName: SpriteRenderer
+--- !u!1 &1881259076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1881259078}
+  - component: {fileID: 1881259077}
+  m_Layer: 0
+  m_Name: GameUIController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1881259077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881259076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5abe8544844d4966b7e9c78b9f8f67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Namespace: Survivor
+  ScriptName: GameUIController
+  ScriptsFolder: Assets/Scripts/Game
+  GeneratePrefab: 0
+  PrefabFolder: Assets/Art/Prefab
+--- !u!4 &1881259078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881259076}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.035374742, y: -0.026074747, z: -0.03751036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1988678302
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,8 +975,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1988678303}
   - component: {fileID: 1988678304}
-  - component: {fileID: 1988678305}
   - component: {fileID: 1988678306}
+  - component: {fileID: 1988678305}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -919,12 +1038,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1988678302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 411e729afed24c62a04e2b99d9122e78, type: 3}
+  m_Script: {fileID: 11500000, guid: 3daa7254273db42fa9af8ff8fbd0bdc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Binds:
-  - MemberName: SelfRigiBody2D
-    Object: {fileID: 1988678304}
+  Namespace: Survior
+  ScriptName: Player
+  ScriptsFolder: Assets/Scripts/Game
+  GeneratePrefab: 0
+  PrefabFolder: Assets/Art/Prefab
+  Sprite: {fileID: 1795700688}
+  HurtBox: {fileID: 29937986}
+  SelfRigiBody2D: {fileID: 1988678304}
 --- !u!114 &1988678306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,17 +1058,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1988678302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1828dc1bd644472fa199c33db8702a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 411e729afed24c62a04e2b99d9122e78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Namespace: Survior
-  ScriptName: Player
-  ScriptsFolder: Assets/Scripts/Game
-  GeneratePrefab: 0
-  PrefabFolder: Assets/Art/Prefab
-  Sprite: {fileID: 0}
-  HurtBox: {fileID: 29937986}
-  SelfRigiBody2D: {fileID: 1988678304}
+  Binds:
+  - MemberName: SelfRigiBody2D
+    Object: {fileID: 1988678304}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -952,4 +1071,5 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1988678303}
-  - {fileID: 861567845}
+  - {fileID: 1881259078}
+  - {fileID: 718088806}

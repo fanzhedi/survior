@@ -1,7 +1,7 @@
 using UnityEngine;
 using QFramework;
 
-namespace Survior
+namespace Survivor
 {
 	public partial class Player : ViewController
 	{
@@ -24,7 +24,9 @@ namespace Survior
 
 			HurtBox.OnTriggerEnter2DEvent(Collider2D=> {
 				this.DestroyGameObjGracefully();
-				UIKit.OpenPanel<UIGameOverPanel>();
+				UIKit.OpenPanel<UIGameOverPanel>(new UIGameOverPanelData(){
+					Name = "游戏结束"
+				});
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 		}
 

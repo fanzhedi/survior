@@ -1,7 +1,7 @@
-// Generate Id:bbde5277-0e58-463a-a920-f3b34c49fa82
+// Generate Id:d5794b8e-cf40-4a2c-8cc0-5eca28687512
 using UnityEngine;
 
-namespace Survior
+namespace Survivor
 {
 	public partial class Enemy
 	{

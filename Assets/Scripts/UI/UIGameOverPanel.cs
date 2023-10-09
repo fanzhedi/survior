@@ -2,10 +2,11 @@ using UnityEngine;
 using QFramework;
 using UnityEngine.SceneManagement;
 
-namespace Survior
+namespace Survivor
 {
 	public class UIGameOverPanelData : UIPanelData
 	{
+		public string Name;
 	}
 	public partial class UIGameOverPanel : UIPanel
 	{
@@ -13,6 +14,7 @@ namespace Survior
 		{
 			mData = uiData as UIGameOverPanelData ?? new UIGameOverPanelData();
 			// please add init code here
+			Title.text = mData.Name;
 
 			ActionKit.OnUpdate.Register(()=> 
 			{

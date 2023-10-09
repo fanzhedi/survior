@@ -18,12 +18,16 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos: []
-    ScriptsFolder: Assets/Scripts/Game/Ability
-    ClassName: SimpleAbility
-    Namespace: Survior
-    MainCode: "using UnityEngine;\nusing QFramework;\n\nnamespace Survior\n{\n\tpublic
-      partial class SimpleAbility : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
+    BindInfos:
+    - TypeName: Survivor.Enemy
+      PathToRoot: Enemy
+      MemberName: Enemy
+    ScriptsFolder: Assets/Scripts/Game
+    ClassName: EnemyGenerator
+    Namespace: Survivor
+    MainCode: "using UnityEngine;\nusing QFramework;\n\nnamespace Survivor\n{\n\tpublic
+      partial class EnemyGenerator : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
       Code Here\n\t\t}\n\t}\n}\n"
-    DesignerCode: "// Generate Id:9f7b8829-0dca-4c17-9bd7-7d69e996084b\nusing UnityEngine;\n\nnamespace
-      Survior\n{\n\tpublic partial class SimpleAbility\n\t{\n\n\t}\n}\n"
+    DesignerCode: "// Generate Id:f0970109-a446-4863-bab4-ffe7297092fe\nusing UnityEngine;\n\nnamespace
+      Survivor\n{\n\tpublic partial class EnemyGenerator\n\t{\n\n\t\tpublic Survivor.Enemy
+      Enemy;\n\n\t}\n}\n"

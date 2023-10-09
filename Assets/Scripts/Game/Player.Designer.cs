@@ -1,7 +1,7 @@
-// Generate Id:5a811afa-634c-40b2-9417-6827d3650ca2
+// Generate Id:76cb6cf3-ddce-4a74-a62d-16daa4ba2495
 using UnityEngine;
 
-namespace Survior
+namespace Survivor
 {
 	public partial class Player
 	{

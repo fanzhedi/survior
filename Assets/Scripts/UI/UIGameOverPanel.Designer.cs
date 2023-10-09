@@ -3,18 +3,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
 
-namespace Survior
+namespace Survivor
 {
-	// Generate Id:b66c5c41-771a-44f2-9bff-4411efeaf29b
+	// Generate Id:00db5b8e-a976-4646-af7a-c0b95bb7120e
 	public partial class UIGameOverPanel
 	{
 		public const string Name = "UIGameOverPanel";
 		
+		[SerializeField]
+		public UnityEngine.UI.Text Title;
 		
 		private UIGameOverPanelData mPrivateData = null;
 		
 		protected override void ClearUIComponents()
 		{
+			Title = null;
 			
 			mData = null;
 		}

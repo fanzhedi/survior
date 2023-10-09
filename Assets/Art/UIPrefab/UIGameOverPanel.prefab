@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3782835346920802335}
   - component: {fileID: 106743445339516173}
   - component: {fileID: 9027458253126821775}
-  - component: {fileID: 5212834531867887751}
   m_Layer: 0
   m_Name: UIGameOverPanel
   m_TagString: Untagged
@@ -52,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0324159bf712e4cfc87cb2dc4c148942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Title: {fileID: 5462659801002925991}
 --- !u!222 &9027458253126821775
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60,36 +60,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4979516998093373868}
   m_CullTransparentMesh: 1
---- !u!114 &5212834531867887751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4979516998093373868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.4716981, g: 0.43832323, b: 0.43832323, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &5302897129397791721
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +71,7 @@ GameObject:
   - component: {fileID: 3861646816667102319}
   - component: {fileID: 1724902583552543286}
   - component: {fileID: 5462659801002925991}
+  - component: {fileID: 3818468496359231826}
   m_Layer: 0
   m_Name: Title
   m_TagString: Untagged
@@ -169,6 +140,22 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "\u6E38\u620F\u7ED3\u675F"
+--- !u!114 &3818468496359231826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5302897129397791721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d51f3a7c41ab0346b49ae50d456bece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkType: 0
+  CustomComponentName: Title
+  CustomComment: 
+  mComponentName: UnityEngine.UI.Text
 --- !u!1 &7168554958789216781
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,7 +1,7 @@
 using UnityEngine;
 using QFramework;
 
-namespace Survior
+namespace Survivor
 {
 	public partial class SimpleAbility : ViewController
 	{
@@ -28,6 +28,7 @@ namespace Survior
 						var enemyRefCache = enemy;
 						ActionKit.Delay(0.3f, () =>
 						{
+							enemy.HP--;
 							enemyRefCache.Sprite.color = Color.white;
 						}).StartGlobal();
 					}
