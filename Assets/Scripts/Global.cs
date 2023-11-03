@@ -1,4 +1,5 @@
 using QFramework;
+using UnityEngine;
 
 namespace Survivor
 { 
@@ -32,6 +33,43 @@ namespace Survivor
 		/// </summary>
 		public static BindableProperty<float> CurrentSeconds = new(0f);
 
+		/// <summary>
+		/// 金币
+		/// </summary>
+		/// <returns></returns>
+		public static BindableProperty<int> Coin = new(0);
+
+		/// <summary>
+		/// 经验掉落概率
+		/// </summary>
+		public static BindableProperty<float> ExpPerect = new(0.5f);
+
+		/// <summary>
+		/// 金币掉落概率
+		/// </summary>
+		/// <returns></returns>
+		public static BindableProperty<float> GoldPerect = new(0.2f);
+
+
+		[RuntimeInitializeOnLoadMethod]
+		public static void AutoInit()
+		{
+			Coin.Value = PlayerPrefs.GetInt("coin", 0);
+
+			Coin.Register(coin=>{
+				PlayerPrefs.SetInt(nameof(coin), coin);
+			});
+
+			ExpPerect.Value = PlayerPrefs.GetFloat(nameof(ExpPerect), 0.5f);
+			ExpPerect.Register(expPerect=>{
+				PlayerPrefs.SetFloat(nameof(ExpPerect), expPerect);
+			});
+
+			GoldPerect.Value = PlayerPrefs.GetFloat(nameof(GoldPerect), 0.2f);
+			GoldPerect.Register(goldPerect=>{
+				PlayerPrefs.SetFloat(nameof(GoldPerect), goldPerect);
+			});
+		}
 		public static void Reset() 
 		{
 			Exp.Value = 0;

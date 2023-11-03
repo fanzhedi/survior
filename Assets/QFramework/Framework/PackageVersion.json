@@ -1,6 +1,6 @@
 {
     "Id": "",
-    "Version": "v1.0.101",
+    "Version": "v1.0.102",
     "Type": 0,
     "AccessRight": 0,
     "DownloadUrl": "",
@@ -11,10 +11,10 @@
     ],
     "DocUrl": "https://liangxiegame.com",
     "Readme": {
-        "version": "v1.0.101",
-        "content": "改进 ConsoleKit 的开关 API",
+        "version": "v1.0.102",
+        "content": "ResKit 增加 AssetBundle 的 Example",
         "author": "liangxie",
-        "date": "2023 年 10 月 24 日 10:16",
+        "date": "2023 年 11 月 06 日 13:04",
         "PackageId": ""
     }
 }
