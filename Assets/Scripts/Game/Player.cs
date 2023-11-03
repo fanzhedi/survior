@@ -19,18 +19,21 @@ namespace Survivor
 		private float MoveSpeed = 5f;
 		void Start()
 		{
-			// Code Here
-			"hello survior".LogInfo();
-
-			HurtBox.OnTriggerEnter2DEvent(Collider2D=> {
-				this.DestroyGameObjGracefully();
-				UIKit.OpenPanel<UIGameOverPanel>(new UIGameOverPanelData(){
-					Name = "游戏结束"
-				});
+			HurtBox.OnTriggerEnter2DEvent(Collider2D=> 
+			{
+				var hitBox = Collider2D.GetComponent<HitBox>();
+				if (hitBox && hitBox.Owner.CompareTag("Enemy")) 
+				{
+					this.DestroyGameObjGracefully();
+					UIKit.OpenPanel<UIGameOverPanel>(new UIGameOverPanelData(){
+						Name = "游戏结束"
+					});
+				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 		}
 
-		private void Update() {
+		private void Update() 
+		{
 			var horizontal = Input.GetAxis("Horizontal");
 			var vertical = Input.GetAxis("Vertical");
 

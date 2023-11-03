@@ -24,13 +24,7 @@ namespace Survivor
 					var distance = (Player.Default.transform.position - enemy.transform.position).magnitude;
 					if (distance <= 5)
 					{
-						enemy.Sprite.color = Color.red;
-						var enemyRefCache = enemy;
-						ActionKit.Delay(0.3f, () =>
-						{
-							enemy.HP--;
-							enemyRefCache.Sprite.color = Color.white;
-						}).StartGlobal();
+						enemy.Hurt();
 					}
 				}
 			}

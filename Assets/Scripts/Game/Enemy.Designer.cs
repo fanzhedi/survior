@@ -1,4 +1,4 @@
-// Generate Id:d5794b8e-cf40-4a2c-8cc0-5eca28687512
+// Generate Id:f394b6c5-0e04-47f9-9727-d3a5691e3011
 using UnityEngine;
 
 namespace Survivor
@@ -7,8 +7,6 @@ namespace Survivor
 	{
 
 		public SpriteRenderer Sprite;
-
-		public CircleCollider2D HurtBox;
 
 	}
 }

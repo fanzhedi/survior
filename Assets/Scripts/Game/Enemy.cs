@@ -5,11 +5,16 @@ namespace Survivor
 {
 	public partial class Enemy : ViewController
 	{
-		public int HP = 3;
+		public float HP = 3.0f;
 		public float MoveSpeed = 2.0f;
 		void Start()
 		{
 			// Code Here
+			EnemyGenerator.EnemyCount.Value++;
+		}
+
+		private void OnDestroy() {
+			EnemyGenerator.EnemyCount.Value--;
 		}
 
 		private void Update() {
@@ -23,8 +28,24 @@ namespace Survivor
 				// 	Name = "游戏通关"
 				// });
 				this.DestroyGameObjGracefully();
-				Global.Exp.Value++;
+				mIgnoreHurt = true;
+
+				// TODO: 经验值掉落
 			}
+		}
+
+
+		private bool mIgnoreHurt = false;
+		public void Hurt()
+		{
+			if (mIgnoreHurt) { return; }
+			Sprite.color = Color.red;
+			// if
+			ActionKit.Delay(0.2f, () =>
+			{
+				HP -= Global.SimpleAbilityDmage.Value;
+				Sprite.color = Color.white;
+			}).Start(this);
 		}
 	}
 }

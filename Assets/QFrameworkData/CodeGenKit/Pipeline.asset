@@ -18,16 +18,12 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos:
-    - TypeName: Survivor.Enemy
-      PathToRoot: Enemy
-      MemberName: Enemy
+    BindInfos: []
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: EnemyGenerator
+    ClassName: HitBox
     Namespace: Survivor
     MainCode: "using UnityEngine;\nusing QFramework;\n\nnamespace Survivor\n{\n\tpublic
-      partial class EnemyGenerator : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
+      partial class HitBox : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
       Code Here\n\t\t}\n\t}\n}\n"
-    DesignerCode: "// Generate Id:f0970109-a446-4863-bab4-ffe7297092fe\nusing UnityEngine;\n\nnamespace
-      Survivor\n{\n\tpublic partial class EnemyGenerator\n\t{\n\n\t\tpublic Survivor.Enemy
-      Enemy;\n\n\t}\n}\n"
+    DesignerCode: "// Generate Id:52e28a64-6c33-408e-88e8-de5e8705dff3\nusing UnityEngine;\n\nnamespace
+      Survivor\n{\n\tpublic partial class HitBox\n\t{\n\n\t}\n}\n"
