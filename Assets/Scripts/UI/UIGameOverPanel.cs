@@ -21,7 +21,8 @@ namespace Survivor
 				if (Input.GetKeyDown(KeyCode.Space)) 
 				{
 					CloseSelf();
-					SceneManager.LoadScene("SampleScene");
+					Global.Reset();
+					SceneManager.LoadScene("Game");
 				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 		}
