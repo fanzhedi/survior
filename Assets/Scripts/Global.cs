@@ -42,32 +42,33 @@ namespace Survivor
 		/// <summary>
 		/// 经验掉落概率
 		/// </summary>
-		public static BindableProperty<float> ExpPerect = new(0.5f);
+		public static BindableProperty<float> ExpPercent = new(0.2f);
 
 		/// <summary>
 		/// 金币掉落概率
 		/// </summary>
 		/// <returns></returns>
-		public static BindableProperty<float> GoldPerect = new(0.2f);
+		public static BindableProperty<float> GoldPercent = new(0.2f);
 
 
 		[RuntimeInitializeOnLoadMethod]
 		public static void AutoInit()
 		{
 			Coin.Value = PlayerPrefs.GetInt("coin", 0);
-
 			Coin.Register(coin=>{
 				PlayerPrefs.SetInt(nameof(coin), coin);
 			});
 
-			ExpPerect.Value = PlayerPrefs.GetFloat(nameof(ExpPerect), 0.5f);
-			ExpPerect.Register(expPerect=>{
-				PlayerPrefs.SetFloat(nameof(ExpPerect), expPerect);
+			// ExpPercent.Value = PlayerPrefs.GetFloat(nameof(ExpPercent), 0.5f);
+			ExpPercent.Value = 0.5f;
+			ExpPercent.Register(expPercent=>{
+				PlayerPrefs.SetFloat(nameof(ExpPercent), expPercent);
 			});
 
-			GoldPerect.Value = PlayerPrefs.GetFloat(nameof(GoldPerect), 0.2f);
-			GoldPerect.Register(goldPerect=>{
-				PlayerPrefs.SetFloat(nameof(GoldPerect), goldPerect);
+			// GoldPercent.Value = PlayerPrefs.GetFloat(nameof(GoldPercent), 0.5f);
+			GoldPercent.Value = 0.5f;
+			GoldPercent.Register(goldPercent=>{
+				PlayerPrefs.SetFloat(nameof(GoldPercent), goldPercent);
 			});
 		}
 		public static void Reset() 
@@ -84,6 +85,27 @@ namespace Survivor
 		public static int LevelUpExp()
 		{
 			return Level.Value * 5;
+		}
+
+		public static void GeneratePowerUp(GameObject gameobject)
+		{
+			//掉落经验
+			var percent = Random.Range(0, 1f);
+
+			if (percent < ExpPercent.Value) 
+			{
+				Debug.Log("经验概率"+ExpPercent.Value+"     随机数" + percent + "   生成经验球");
+				PowerUpManager.Default.Exp.Instantiate().Position(gameobject.Position()).Show();
+			} 
+			else 
+			{
+				percent = Random.Range(0, 1f);
+				if (percent < GoldPercent.Value) 
+				{
+					Debug.Log("随机数" + percent + "   生成金币球");
+					PowerUpManager.Default.Coin.Instantiate().Position(gameobject.Position()).Show();
+				}
+			}
 		}
 
 	}

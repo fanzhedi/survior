@@ -85,6 +85,12 @@ namespace Survivor
 			
 			UpgradeDamage.Hide();
 			UpgradeDuration.Hide();
+
+			//金币显示
+			Global.Coin.RegisterWithInitValue(coin =>
+			{
+				CoinCount.text = "金币：" + coin;
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 		}
 		
 		protected override void OnOpen(IUIData uiData = null)

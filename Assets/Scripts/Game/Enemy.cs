@@ -24,13 +24,10 @@ namespace Survivor
 			}
 
 			if (HP <= 0) {
-				// UIKit.OpenPanel<UIGameOverPanel>(new UIGameOverPanelData(){
-				// 	Name = "游戏通关"
-				// });
 				this.DestroyGameObjGracefully();
 				mIgnoreHurt = true;
-
 				// TODO: 经验值掉落
+				Global.GeneratePowerUp(gameObject);
 			}
 		}
 

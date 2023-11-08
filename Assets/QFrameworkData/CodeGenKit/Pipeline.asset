@@ -18,12 +18,19 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos: []
+    BindInfos:
+    - TypeName: Survivor.Exp
+      PathToRoot: Exp
+      MemberName: Exp
+    - TypeName: Survivor.Coin
+      PathToRoot: Coin
+      MemberName: Coin
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: HitBox
+    ClassName: PowerUpManager
     Namespace: Survivor
     MainCode: "using UnityEngine;\nusing QFramework;\n\nnamespace Survivor\n{\n\tpublic
-      partial class HitBox : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
+      partial class PowerUpManager : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
       Code Here\n\t\t}\n\t}\n}\n"
-    DesignerCode: "// Generate Id:52e28a64-6c33-408e-88e8-de5e8705dff3\nusing UnityEngine;\n\nnamespace
-      Survivor\n{\n\tpublic partial class HitBox\n\t{\n\n\t}\n}\n"
+    DesignerCode: "// Generate Id:f9c0880c-5fe2-40da-aa68-50b82f3ada40\nusing UnityEngine;\n\nnamespace
+      Survivor\n{\n\tpublic partial class PowerUpManager\n\t{\n\n\t\tpublic Survivor.Exp
+      Exp;\n\n\t\tpublic Survivor.Coin Coin;\n\n\t}\n}\n"

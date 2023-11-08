@@ -8,7 +8,6 @@ namespace Survivor
 		public static Player Default;
 
 		private void Awake() {
-			ResKit.Init();
 			Default = this;
 		}
 
